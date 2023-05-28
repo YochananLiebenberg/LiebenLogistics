@@ -1,0 +1,242 @@
+/* About Section */
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    justify-items: center;
+    padding: 100px;
+
+    background-color: white;
+}
+.About-section-title{
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 1.08349;
+    letter-spacing: -.003em;
+}
+.About-section-content{
+    color: black;
+    font-size: 25px;
+    padding-top: 40px;
+    letter-spacing: .007em;
+
+}
+
+.About-text{
+    padding-bottom: 40px;
+}
+.Profile_details{
+    display: grid;
+    width: 350px;
+    background-color: white;
+    align-items: center;
+    justify-items: center;
+    border-radius: 0px 15px 15px 0px;
+    padding: 10px;
+}
+.Name{
+    font-size: xx-large;
+    font-weight: 545;
+    text-align: center;
+    color: black;
+    font-family: lato,sans-serif;
+}
+.Title{
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #191919;
+}
+.About {
+    font-family: lato,sans-serif;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.profile-cards-section{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.profiles {
+    display: flex;
+    margin: 25px;
+    filter: drop-shadow(5px 5px 10px #44444d81);
+}
+
+.card-container {
+    height: 280px;
+    width: 280px;
+    perspective: 3000px;
+}
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.card-front,
+.card-back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+
+    border-radius: 15px 0px 0px 15px;
+}
+.card-front{
+    display: grid;
+    background-color: white;
+}
+.card-back{
+    background-color: white;
+    transform: rotateY(180deg);
+}
+/* Transitions */
+.flip-exit {
+    transform: rotateY(0deg);
+}
+.flip-exit-active {
+    transform: rotateY(180deg);
+    transition: transform 300ms;
+}
+.flip-exit-done {
+    transform: rotateY(180deg);
+}
+.flip-enter {
+    transform: rotateY(180deg);
+}
+.flip-enter-active {
+    transform: rotateY(0deg);
+    transition: transform 300ms;
+}
+.flip-enter-done {
+    transform: rotateY(0deg);
+}
+
+.contact-line{
+    display: grid;
+    height: 36px;
+    margin-bottom: 20px;
+}
+.contact-line-link{
+    display: flex;
+    height: 36px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100px;
+}
+.social-link{
+    padding-left: 10px;
+    font-family: lato,sans-serif;
+    color: black;
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+.contact-title{
+    width: 60px;
+    font-family: lato,sans-serif;
+    color: black;
+    font-weight: bolder;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contact-details{
+
+    font-size: 15px;
+    font-family: Monospace;
+}
+
+.contactDetails-button {
+    border: none;
+    font-size: 16px;
+    color: white;
+    padding: 8px 16px;
+    background-color: #4690F9;
+    border-radius: 5px;
+    font-family: lato,sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* mobile */
+@media (max-width: 1100px) {
+    .about-section {
+        padding: 0;
+        position: relative;
+    }
+    .blocks-container{
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    .left-summary{
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+    .Explore-button{
+        position: relative;
+
+        padding-top: 2rem;
+        padding-bottom: .5rem;
+        font-size: 25px;
+
+    }
+    .services-title{
+        padding-top: 4rem;
+        position: relative;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .services-text{
+        color: #6e6e73;
+        font-size: 20px;
+        padding-top: 2rem;
+    }
+    .ThreeD-icon {
+        max-height: 5rem;
+    }
+    .services-category{
+        font-size: 25px;
+        font-weight: 700;
+        font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        text-align: center;
+    }
+    .service-description{
+        padding: 10px;
+        color: #6e6e73;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 400;
+        text-align: center;
+    }
+}

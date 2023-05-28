@@ -1,0 +1,308 @@
+.projects-section{
+    padding: 5rem 0;
+    background-color: white;
+
+}
+
+.project-section-text{
+    font-family: "larken", sans-serif;
+    padding-left: 13rem;
+    position: relative;
+    background-color: white;
+    text-align: left;
+
+}
+.project-section-title{
+    font-size: 28px;
+    font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-weight: 600;
+    line-height: 1;
+    color: black;
+    z-index: 2;
+}
+
+.grey{
+    color: #6e6e73;
+}
+
+.project-section-about{
+    color: black;
+    font-size: 34px;
+    font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1.14286;
+    font-weight: 600;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.media-scroller{
+    --spacer: 20px;
+    background: white;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+
+    overflow-x: auto;
+    padding: 50px;
+    margin: auto;
+}
+
+.media-scroller::-webkit-scrollbar{
+    display: none;
+}
+
+.media-element{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 100px;
+
+
+    min-width: 900px;
+    height: auto;
+
+    transition: all .3s cubic-bezier(0,0,.5,1);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0.25rem 1rem rgb(0 0 0 / .6);
+}
+
+.media-element:hover {
+    box-shadow: 0 0.25rem 1rem rgb(0 0 0 / .38);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 50px;
+}
+
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+
+.active{
+    cursor: grabbing;
+    transform: scale(1);
+}
+
+
+
+.product-type {
+    font-family: lato,sans-serif;
+    color: lightgray;
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 300;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.img-product{
+    flex-shrink: 0;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+}
+.media-element img{
+    object-fit: cover;
+}
+
+.project-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.align-right {
+    margin-left: auto;
+}
+
+
+
+.product-title {
+    font-family: "larken", sans-serif;
+    color: white;
+    font-size: 28px;
+    line-height: 40px;
+    padding-top: 20px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.project-about{
+    font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: white;
+    font-size: 14px;
+    padding-top: 1.5rem;
+    letter-spacing: 0.01em;
+    opacity: 80%;
+}
+
+.link-for-more{
+    display: block;
+    width: 108px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    font-family: lato,sans-serif;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+#Product-1{
+    background-color: #724345;
+}
+
+#Product-2{
+    background-color: #74B3CE;
+}
+#Product-3{
+    background-color: #28231C;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    /* Styles for small screens */
+    .projects-section {
+        padding: 0;
+        flex-direction: column;
+    }
+    .project-section-text{
+        padding: 0;
+        padding-top: 5rem;
+        padding-bottom: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+    .media-element{
+        padding: 50px;
+        min-width: 300px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        transition: all .3s cubic-bezier(0,0,.5,1);
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0.25rem 1rem rgb(0 0 0 / .6);
+    }
+
+
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Styles for medium screens */
+    .projects-section {
+        padding: 0 3rem;
+        flex-direction: column;
+    }
+    .project-section-text{
+        padding: 0;
+        padding-top: 5rem;
+        padding-bottom: 1.5rem;
+        width: 100%;
+        text-align: left;
+    }
+    .media-element{
+        padding: 50px;
+        min-width: 300px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        transition: all .3s cubic-bezier(0,0,.5,1);
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0.25rem 1rem rgb(0 0 0 / .6);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    /* Styles for large screens */
+    .projects-section {
+        padding: 0 3rem;
+        flex-direction: column;
+    }
+    .project-section-text{
+        padding: 0;
+        padding-top: 5rem;
+        padding-bottom: 1.5rem;
+        width: 100%;
+        text-align: left;
+    }
+    .media-element{
+        padding: 50px;
+        min-width: 300px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        transition: all .3s cubic-bezier(0,0,.5,1);
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0.25rem 1rem rgb(0 0 0 / .6);
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    /* Styles for extra-large screens */
+    .projects-section {
+        padding: 0 3rem;
+        flex-direction: column;
+    }
+    .project-section-text{
+        padding: 0;
+        padding-top: 5rem;
+        padding-bottom: 1.5rem;
+        width: 100%;
+        text-align: left;
+    }
+    .media-element{
+        padding: 50px;
+        min-width: 400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        transition: all .3s cubic-bezier(0,0,.5,1);
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0.25rem 1rem rgb(0 0 0 / .6);
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1450px) {
+    /* Styles for extra-extra-large screens */
+    .projects-section {
+        padding: 0 3rem;
+        flex-direction: column;
+    }
+    .project-section-text{
+        padding: 0;
+        padding-top: 5rem;
+        padding-bottom: 1.5rem;
+        width: 100%;
+        text-align: left;
+    }
+    .media-element{
+        padding: 50px;
+        min-width: 400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        transition: all .3s cubic-bezier(0,0,.5,1);
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0.25rem 1rem rgb(0 0 0 / .6);
+    }
+
+}
+

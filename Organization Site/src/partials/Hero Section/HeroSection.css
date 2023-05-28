@@ -1,0 +1,83 @@
+
+/* Hero Section */
+.HeroHome-section {
+    margin: auto;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff; /* Add this line to set the background color */
+
+}
+
+
+.Main-Title {
+    color: #3A4856;
+    font-size: 100px;
+    position: relative;
+    top: 30%;
+    letter-spacing: 15px;
+    padding-left: 20px;
+
+    font-family: "larken", sans-serif;
+    font-style: normal;
+    line-height: 80px;
+    z-index: 100;
+    text-align: center;
+
+
+}
+.Main-Title-smaller{
+    letter-spacing: 20px;
+    padding-bottom: 10px;
+
+    text-transform: lowercase;
+    text-align: center;
+
+
+}
+.Video-background{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -1px;
+}
+
+
+.Main-Slogan {
+    font-family: "larken", sans-serif;
+    font-style: italic;
+    text-transform: lowercase;
+    color: rgba(2, 17, 27, 0.38);
+    position: relative;
+    top: 40%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.speech-bubble{
+    padding-left: 2px;
+}
+
+
+/* Responsive */
+
+/* Smaller desktop */
+@media (max-width: 1500px) {
+    .Main-Title{
+        font-size: 50px;
+        padding: 0 1.5rem;
+    }
+    .Main-Slogan{
+        font-size: 25px;
+        padding: 0 1.5rem;
+    }
+
+}
+
+
+
+
+
+

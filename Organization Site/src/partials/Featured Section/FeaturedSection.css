@@ -1,0 +1,223 @@
+/* Featured product section */
+.Featured-section{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: black;
+    align-items: stretch;
+    padding: 0 13rem;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Left container */
+.left-container{
+    padding: 5rem 0;
+    width: 30vw;
+}
+.featured-left-title{
+    font-size: 28px;
+    font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-weight: 600;
+    line-height: 1;
+    color: white;
+    z-index: 2;
+}
+.featured-left-text{
+    font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: white;
+    font-size: 14px;
+    padding-top: 1.5rem;
+    letter-spacing: 0.01em;
+    opacity: 80%;
+}
+.second-title-color{
+    color: #6e6e73;
+}
+
+/* Right container */
+.right-container{
+    display: flex;
+}
+.featured-right-picture{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+}
+.featured-right-picture img {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    width: 250px;
+    z-index: 2;
+    height: 105%;
+}
+.rainbow-right-text{
+    padding: 5rem 0;
+    padding-left: 5rem;
+    display: grid;
+
+
+}
+.rainbow-right-text h1{
+    font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 28px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(20deg, #057aff, #a5d6ff, #aff5b4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Image border */
+
+.card {
+    position: relative;
+    align-items: flex-end;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 105%;
+    border-radius: 40px;
+
+    box-shadow:
+            inset 0 0 50px #fff,
+            inset 20px 0 80px #aff5b4,
+            inset -20px 0 80px #057aff,
+            inset 20px 0 300px #aff5b4,
+            inset -20px 0 300px #057aff,
+            0 0 10px #fff,
+            -10px 0 80px #aff5b4,
+            10px 0 80px #057aff;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    /* Styles for small screens */
+    .Featured-section{
+        padding: 0 3rem;
+    }
+    .left-container{
+        padding: 5rem 0;
+        width: 100%;
+    }
+    .right-container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .featured-left-title{
+        text-align: center;
+    }
+    .featured-left-text{
+        text-align: center;
+    }
+    .featured-right-picture img {
+        width: 160px;
+        height: auto;
+    }
+    .card {
+        width: 150px;
+        height: 210px;
+        border-radius: 40px;
+    }
+    .rainbow-right-text{
+        padding: 5rem 0;
+        padding-left: 2rem;
+
+    }
+    .rainbow-right-text h1{
+        font-size: 20px;
+        text-align: center;
+
+    }
+
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Styles for medium screens */
+    /* Styles for small screens */
+    .Featured-section{
+        padding: 0 3rem;
+        flex-wrap: nowrap;
+    }
+    .left-container{
+        padding: 5rem 0;
+        width: 50vw;
+        padding-right: 1.5rem;
+    }
+    .right-container{
+        display: flex;
+    }
+    .featured-left-title{
+        text-align: left;
+    }
+    .featured-left-text{
+        text-align: left;
+    }
+    .featured-right-picture img {
+        width: 160px;
+        height: auto;
+    }
+    .card {
+        width: 150px;
+        height: 210px;
+        border-radius: 40px;
+    }
+    .rainbow-right-text{
+        padding: 5rem 0;
+        padding-left: 2rem;
+    }
+    .rainbow-right-text h1{
+        font-size: 20px;
+    }
+
+
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    /* Styles for large screens */
+    .Featured-section{
+        padding: 0 3rem;
+    }
+    .left-container{
+        padding: 5rem 0;
+        width: 30vw;
+    }
+    .featured-right-picture img {
+        width: 160px;
+        height: auto;
+    }
+    .card {
+        width: 150px;
+        height: 210px;
+        border-radius: 40px;
+    }
+    .rainbow-right-text{
+        padding: 5rem 0;
+        padding-left: 2rem;
+    }
+    .rainbow-right-text h1{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    /* Styles for extra-large screens */
+    .Featured-section{
+        padding: 0 3rem;
+    }
+    .left-container{
+        padding: 5rem 0;
+        width: 30vw;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1450px) {
+    /* Styles for extra-extra-large screens */
+    .Featured-section{
+        padding: 0 3rem;
+    }
+}
