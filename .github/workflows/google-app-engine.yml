@@ -48,7 +48,7 @@ jobs:
           name: node-app
 
       - name: Setup Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@master
+        uses: google-github-actions/setup-gcloud@main
         with:
           project_id: ${{ secrets.GCLOUD_PROJECT }}
           service_account_key: ${{ secrets.GCLOUD_SA_KEY }}
