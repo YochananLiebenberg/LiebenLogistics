@@ -54,7 +54,7 @@ jobs:
       - name: Re-create directory structure
         run: |
           mkdir -p "Organization Site/dist"
-          mv * "Organization Site/dist/"
+          mv _redirects assets index.html "Organization Site/dist/"
 
       - uses: google-github-actions/auth@v1
         with:
