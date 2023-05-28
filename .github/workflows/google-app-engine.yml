@@ -25,6 +25,11 @@ jobs:
           npm run build
           dir
       
+      - name: Copy app.yaml to dist
+        run: |
+          cd "Organization Site"
+          cp app.yaml dist/
+
       - name: Delete old artifacts
         uses: geekyeggo/delete-artifact@v1
         with:
@@ -46,15 +51,10 @@ jobs:
         with:
           name: node-app
 
-      - name: Check current directory
-        run: |
-          pwd
-          ls -la
-
       - name: Re-create directory structure
         run: |
           mkdir -p "Organization Site/dist"
-          mv _redirects assets index.html "Organization Site/dist/"
+          mv * "Organization Site/dist/"
 
       - uses: google-github-actions/auth@v1
         with:
@@ -62,6 +62,11 @@ jobs:
 
       - name: Setup Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
+
+      - name: List directory contents
+        run: |
+          cd "Organization Site"
+          ls -la
 
       - name: Deploy to Google App Engine
         run: |
