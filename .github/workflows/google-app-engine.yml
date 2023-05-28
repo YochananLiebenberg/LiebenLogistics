@@ -29,7 +29,6 @@ jobs:
         uses: geekyeggo/delete-artifact@v1
         with:
           name: node-app
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -47,12 +46,12 @@ jobs:
         with:
           name: node-app
 
-      - name: Setup Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@main
+      - uses: google-github-actions/auth@v1
         with:
-          project_id: ${{ secrets.GCLOUD_PROJECT }}
-          service_account_key: ${{ secrets.GCLOUD_SA_KEY }}
-          export_default_credentials: true
+          credentials_json: ${{ secrets.GCLOUD_SA_KEY }}
+
+      - name: Setup Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
 
       - name: Deploy to Google App Engine
         run: |
