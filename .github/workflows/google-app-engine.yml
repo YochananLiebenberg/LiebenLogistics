@@ -49,7 +49,8 @@ jobs:
       - name: Re-create directory structure
         run: |
           mkdir -p "Organization Site/dist"
-          mv * "Organization Site/dist/"
+          ls  # This will list the files in the current directory
+          mv node-app/* "Organization Site/dist/"
 
       - uses: google-github-actions/auth@v1
         with:
@@ -60,5 +61,4 @@ jobs:
 
       - name: Deploy to Google App Engine
         run: |
-          cd "Organization Site"
-          gcloud app deploy app.yaml --quiet --project ${{ secrets.GCLOUD_PROJECT }}
+          gcloud app deploy "Organization Site/app.yaml" --quiet --project ${{ secrets.GCLOUD_PROJECT }}
