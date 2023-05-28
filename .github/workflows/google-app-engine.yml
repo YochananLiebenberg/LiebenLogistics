@@ -29,7 +29,7 @@ jobs:
         uses: geekyeggo/delete-artifact@v1
         with:
           name: node-app
-          
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -46,11 +46,15 @@ jobs:
         with:
           name: node-app
 
+      - name: Check current directory
+        run: |
+          pwd
+          ls -la
+
       - name: Re-create directory structure
         run: |
           mkdir -p "Organization Site/dist"
-          ls  # This will list the files in the current directory
-          mv node-app/* "Organization Site/dist/"
+          mv ../node-app/* "Organization Site/dist/"
 
       - uses: google-github-actions/auth@v1
         with:
@@ -61,4 +65,5 @@ jobs:
 
       - name: Deploy to Google App Engine
         run: |
-          gcloud app deploy "Organization Site/app.yaml" --quiet --project ${{ secrets.GCLOUD_PROJECT }}
+          cd "Organization Site/dist"
+          gcloud app deploy app.yaml --quiet --project ${{ secrets.GCLOUD_PROJECT }}
