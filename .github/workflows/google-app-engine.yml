@@ -55,5 +55,6 @@ jobs:
 
       - name: Deploy to Google App Engine
         run: |
-          cd node-app
+          cd "Organization Site/dist"
           gcloud app deploy app.yaml --quiet --project ${{ secrets.GCLOUD_PROJECT }}
+
