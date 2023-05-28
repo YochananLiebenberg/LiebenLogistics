@@ -46,6 +46,11 @@ jobs:
         with:
           name: node-app
 
+      - name: Re-create directory structure
+        run: |
+          mkdir -p "Organization Site/dist"
+          mv node-app/* "Organization Site/dist/"
+
       - uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.GCLOUD_SA_KEY }}
@@ -57,4 +62,3 @@ jobs:
         run: |
           cd "Organization Site/dist"
           gcloud app deploy app.yaml --quiet --project ${{ secrets.GCLOUD_PROJECT }}
-
