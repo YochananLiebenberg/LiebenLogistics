@@ -27,8 +27,7 @@ jobs:
       
       - name: Copy app.yaml to dist
         run: |
-          cd "Organization Site"
-          cp app.yaml dist/
+          cp "Organization Site/app.yaml" "Organization Site/dist/"
 
       - name: Delete old artifacts
         uses: geekyeggo/delete-artifact@v1
@@ -51,10 +50,9 @@ jobs:
         with:
           name: node-app
 
-      - name: Re-create directory structure
+      - name: Move artifact to correct location
         run: |
-          mkdir -p "Organization Site/dist"
-          mv * "Organization Site/dist/"
+          mv node-app/* "Organization Site/dist/"
 
       - uses: google-github-actions/auth@v1
         with:
