@@ -24,7 +24,7 @@ jobs:
           npm install
           npm run build
           dir
-      
+          
       - name: Copy app.yaml to dist
         run: |
           cp app.yaml dist/
@@ -50,11 +50,11 @@ jobs:
         with:
           name: node-app
 
-      - name: Move artifact to correct location
+      - name: Move the artifacts to the right directory
         run: |
           mkdir -p "Organization Site/dist"
-          mv * "Organization Site/dist/"
-
+          mv node-app/* "Organization Site/dist/"
+      
       - uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.GCLOUD_SA_KEY }}
@@ -62,12 +62,7 @@ jobs:
       - name: Setup Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
 
-      - name: List directory contents
-        run: |
-          cd "Organization Site"
-          ls -la
-
       - name: Deploy to Google App Engine
         run: |
-          cd "Organization Site"
+          cd "Organization Site/dist"
           gcloud app deploy app.yaml --quiet --project ${{ secrets.GCLOUD_PROJECT }}
