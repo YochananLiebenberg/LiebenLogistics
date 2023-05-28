@@ -28,6 +28,10 @@ jobs:
       - name: Copy app.yaml to dist
         run: |
           cp app.yaml dist/
+          
+      - name: Copy app.yaml to project root
+        run: |
+          cp app.yaml ../
 
       - name: Delete old artifacts
         uses: geekyeggo/delete-artifact@v1
