@@ -1,4 +1,4 @@
-runtime: nodejs20
+runtime: nodejs
 env: flex
 automatic_scaling:
   cool_down_period_sec: 180
