@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "npm run build:frontend",
+    "build:frontend": "npm run build:css && npm run build:js",
+    "build:css": "tailwindcss build src/styles.css -o build/css/styles.css",
+    "build:js": "react-scripts build",
+    "build:server": "npm run build:server:typescript",
+    "build:server:typescript": "tsc -p server",
     "preview": "vite preview",
     "start": "node server.js"
   },
