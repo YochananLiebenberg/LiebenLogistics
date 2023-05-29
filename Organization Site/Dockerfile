@@ -1,5 +1,5 @@
 # Use a base image with compatible GLIBC version
-FROM node:lts
+FROM node:14
 
 # Set working directory
 WORKDIR /app
