@@ -1,5 +1,5 @@
-# Use the same Node.js version as your local environment
-FROM node:14.x
+# Use the specific Node.js version as your local environment
+FROM node:14
 
 # Set working directory
 WORKDIR /app
