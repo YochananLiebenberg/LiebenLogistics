@@ -25,11 +25,14 @@ jobs:
         working-directory: ./Organization Site
 
       - name: Setup Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@main
+        uses: google-github-actions/setup-gcloud@v0.3.0
         with:
           project_id: ${{ secrets.GCLOUD_PROJECT }}
           service_account_key: ${{ secrets.GCLOUD_SA_KEY }}
           export_default_credentials: true
+
+      - name: Authenticate with Google Cloud
+        run: echo "${{ secrets.GCP_SA_KEY }}" | gcloud auth activate-service-account --key-file=-
 
       - name: Deploy to App Engine
         run: gcloud app deploy --quiet
