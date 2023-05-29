@@ -1,5 +1,5 @@
-# Use a base image with compatible GLIBC version
-FROM node:14
+# Use the same Node.js version as your local environment
+FROM node:18.12.1
 
 # Set working directory
 WORKDIR /app
