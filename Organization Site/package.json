@@ -6,7 +6,7 @@
     "build": "npm run build:client && npm run build:server",
     "build:client": "npm run build:frontend",
     "build:frontend": "npm run build:css && npm run build:js",
-    "build:css": "tailwindcss build src/styles.css -o build/css/styles.css",
+    "build:css": "tailwindcss build src/css/styles.css -o build/css/styles.css",
     "build:js": "react-scripts build",
     "build:server": "npm run build:server:typescript",
     "build:server:typescript": "tsc -p server",
